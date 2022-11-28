@@ -1,7 +1,9 @@
+import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
 
 const addVocabularyForm = (obj = {}) => {
   console.warn(obj);
+  clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-book--${obj.firebaseKey}` : 'submit-Vocabulary'}" class="mb-4">
       <div class="form-group">
