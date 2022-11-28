@@ -1,8 +1,9 @@
-  {
-    "email": "ta@ta.com",
+{"-MiBsBKGWFEU-yluJkL-" : {
+    "title": "string",
     "firebaseKey": "-MiBsfuTafbEQ7eAULxV",
-    "first_name": "Tomi",
-    "last_name": "Adeyemi",
+    "definition": "it strings along the string",
+    "language": "javascript",
     "favorite": true,
     "uid": ""
   }
+}
