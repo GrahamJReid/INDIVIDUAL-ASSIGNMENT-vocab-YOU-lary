@@ -1,3 +1,4 @@
+import logoutButton from '../../components/buttons/logoutButton';
 import domBuilder from '../components/shared/domBuilder';
 import navBar from '../components/shared/navBar';
 
@@ -6,7 +7,7 @@ const startApp = () => {
   // ADD THE EVENT LISTENTERS TO THE DOM
   // ADD FORM EVENT LISTENTERS TO THE DOM
   navBar(); // DYNAMICALLY ADD THE NAV
-  // ADD THE LOGOUT BUTTON COMPONENT
+  logoutButton();// ADD THE LOGOUT BUTTON COMPONENT
   // ATTACH THE EVENT LISTENERS TO THE NAVBAR
 };
 export default startApp;

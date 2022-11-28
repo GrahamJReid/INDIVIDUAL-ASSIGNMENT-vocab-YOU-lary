@@ -2,11 +2,11 @@
 // import checkLoginStatus from './helpers/auth';
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
-import startApp from './utils/startApp';
+
+import ViewDirectorBasedOnUserAuthStatus from './utils/viewDirector';
 
 const init = () => {
-  startApp();
-
+  ViewDirectorBasedOnUserAuthStatus();
   // USE WITH FIREBASE AUTH
   // checkLoginStatus();
 };
