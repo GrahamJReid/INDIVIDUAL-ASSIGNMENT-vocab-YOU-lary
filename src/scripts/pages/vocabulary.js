@@ -13,7 +13,7 @@ const showVocab = (array) => {
           <p>${item.definition}</p>
         
       
-    
+          <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"> Delete</i>
         </div>
       </div>`;
   });
