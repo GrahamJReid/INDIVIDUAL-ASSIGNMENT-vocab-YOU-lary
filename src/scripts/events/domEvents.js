@@ -1,4 +1,4 @@
-import { deleteVocabulary, getVocabulary } from '../../api/vocabularyData';
+import { deleteVocabulary, getSingleVocabulary, getVocabulary } from '../../api/vocabularyData';
 import addVocabularyForm from '../forms/addVocabularyForm';
 import showVocab from '../pages/vocabulary';
 
@@ -17,6 +17,11 @@ const domEvents = (user) => {
           getVocabulary(user.uid).then(showVocab);
         });
       }
+    }
+    if (e.target.id.includes('edit-Vocabulary-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleVocabulary(firebaseKey).then((bookObj) => addVocabularyForm(bookObj));
+      // getSingleBook(firebaseKey).then(addBookForm); // using the callback method
     }
   });
 };

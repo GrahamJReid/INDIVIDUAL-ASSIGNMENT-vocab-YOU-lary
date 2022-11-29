@@ -5,7 +5,7 @@ const addVocabularyForm = (obj = {}) => {
   console.warn(obj);
   clearDom();
   const domString = `
-    <form id="${obj.firebaseKey ? `update-book--${obj.firebaseKey}` : 'submit-Vocabulary'}" class="mb-4">
+    <form id="${obj.firebaseKey ? `update-Vocabulary--${obj.firebaseKey}` : 'submit-Vocabulary'}" class="mb-4">
       <div class="form-group">
         <label for="title">Book Title</label>
         <input type="text" class="form-control" id="title" aria-describedby="bookTitle" placeholder="Enter Book Title" value="${obj.title || ''}" required>

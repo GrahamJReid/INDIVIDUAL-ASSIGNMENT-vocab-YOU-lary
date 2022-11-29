@@ -23,6 +23,21 @@ const formEvents = (user) => {
         });
       });
     }
+    if (e.target.id.includes('update-Vocabulary')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      // console.warn('CLICKED UPDATE BOOK', e.target.id);
+
+      const payload = {
+        title: document.querySelector('#title').value,
+        definition: document.querySelector('#definition').value,
+        language: document.querySelector('#language').value,
+        uid: `${user.uid}`,
+        firebaseKey
+      };
+      updateVocabulary(payload).then(() => {
+        getVocabulary(user.uid).then(showVocab);
+      });
+    }
   });
 };
 
