@@ -8,12 +8,18 @@ const formEvents = (user) => {
     // TODO: CLICK EVENT FOR SUBMITTING FORM FOR ADDING A BOOK
     if (e.target.id.includes('submit-Vocabulary')) {
       // console.warn('CLICKED SUBMIT BOOK', e.target.id);
-
+      const currentdate = new Date();
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#language').value,
         uid: `${user.uid}`,
+        time: `${currentdate.getDate()}/${
+          currentdate.getMonth() + 1}/${
+          currentdate.getFullYear()} @ ${
+          currentdate.getHours()}:${
+          currentdate.getMinutes()}:${
+          currentdate.getSeconds()}`,
       };
       createVocabulary(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
