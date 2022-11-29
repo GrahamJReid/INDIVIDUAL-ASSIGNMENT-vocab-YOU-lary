@@ -78,7 +78,35 @@ const javascriptLanguage = (uid) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const onSale = Object.values(data).filter((item) => item.language === 'Javascript');
+      const onSale = Object.values(data).filter((item) => item.language === 'JAVASCRIPT');
+      resolve(onSale);
+    })
+    .catch(reject);
+});
+const cssLanguage = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const onSale = Object.values(data).filter((item) => item.language === 'CSS');
+      resolve(onSale);
+    })
+    .catch(reject);
+});
+const htmlLanguage = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const onSale = Object.values(data).filter((item) => item.language === 'HTML');
       resolve(onSale);
     })
     .catch(reject);
@@ -89,5 +117,7 @@ export {
   getVocabulary,
   deleteVocabulary,
   getSingleVocabulary,
-  javascriptLanguage
+  javascriptLanguage,
+  cssLanguage,
+  htmlLanguage
 };

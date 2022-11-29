@@ -1,5 +1,6 @@
 import {
-  deleteVocabulary, getSingleVocabulary, getVocabulary, javascriptLanguage
+  cssLanguage,
+  deleteVocabulary, getSingleVocabulary, getVocabulary, htmlLanguage, javascriptLanguage
 } from '../../api/vocabularyData';
 import addVocabularyForm from '../forms/addVocabularyForm';
 import showVocab from '../pages/vocabulary';
@@ -28,6 +29,14 @@ const domEvents = (user) => {
     if (e.target.id.includes('javascript')) {
       console.warn('this is the javascriptvibe');
       javascriptLanguage(user.uid).then(showVocab);
+    }
+    if (e.target.id.includes('css')) {
+      console.warn('this is the javascriptvibe');
+      cssLanguage(user.uid).then(showVocab);
+    }
+    if (e.target.id.includes('html')) {
+      console.warn('this is the javascriptvibe');
+      htmlLanguage(user.uid).then(showVocab);
     }
   });
 };
