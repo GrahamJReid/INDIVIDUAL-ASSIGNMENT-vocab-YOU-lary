@@ -83,11 +83,41 @@ const javascriptLanguage = (uid) => new Promise((resolve, reject) => {
     })
     .catch(reject);
 });
+const cssLanguage = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const onSale = Object.values(data).filter((item) => item.language === 'CSS');
+      resolve(onSale);
+    })
+    .catch(reject);
+});
+const htmlLanguage = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const onSale = Object.values(data).filter((item) => item.language === 'HTML');
+      resolve(onSale);
+    })
+    .catch(reject);
+});
 export {
   createVocabulary,
   updateVocabulary,
   getVocabulary,
   deleteVocabulary,
   getSingleVocabulary,
-  javascriptLanguage
+  javascriptLanguage,
+  cssLanguage,
+  htmlLanguage
 };

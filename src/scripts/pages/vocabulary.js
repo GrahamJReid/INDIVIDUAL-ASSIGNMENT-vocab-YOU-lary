@@ -5,8 +5,8 @@ const showVocab = (array) => {
   clearDom();
   let domString = `<div>
   <button id="javascript">Javascript</button>
-  <button>HTML</button>
-  <button>CSS</button>
+  <button id="html">HTML</button>
+  <button id="css">CSS</button>
   </div>`;
 
   array.forEach((item) => {
