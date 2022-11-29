@@ -3,7 +3,12 @@ import renderToDOM from '../utils/renderToDOM';
 
 const showVocab = (array) => {
   clearDom();
-  let domString = '';
+  let domString = `<div>
+  <button id="javascript">Javascript</button>
+  <button>HTML</button>
+  <button>CSS</button>
+  </div>`;
+
   array.forEach((item) => {
     domString += `
       <div class="card">

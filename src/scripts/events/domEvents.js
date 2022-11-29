@@ -1,4 +1,6 @@
-import { deleteVocabulary, getSingleVocabulary, getVocabulary } from '../../api/vocabularyData';
+import {
+  deleteVocabulary, getSingleVocabulary, getVocabulary, javascriptLanguage
+} from '../../api/vocabularyData';
 import addVocabularyForm from '../forms/addVocabularyForm';
 import showVocab from '../pages/vocabulary';
 
@@ -22,6 +24,10 @@ const domEvents = (user) => {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleVocabulary(firebaseKey).then((bookObj) => addVocabularyForm(bookObj));
       // getSingleBook(firebaseKey).then(addBookForm); // using the callback method
+    }
+    if (e.target.id.includes('javascript')) {
+      console.warn('this is the javascriptvibe');
+      javascriptLanguage(user.uid).then(showVocab);
     }
   });
 };
