@@ -78,7 +78,7 @@ const javascriptLanguage = (uid) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const onSale = Object.values(data).filter((item) => item.language === 'Javascript');
+      const onSale = Object.values(data).filter((item) => item.language === 'JAVASCRIPT');
       resolve(onSale);
     })
     .catch(reject);
