@@ -1,5 +1,26 @@
+/* eslint-disable no-restricted-syntax */
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
+
+const searchedVocabOnDom = (arr) => {
+  clearDom();
+  let formCard = '';
+  for (const item of arr) {
+    formCard += `<div class="card">
+  
+  <div class="card-body" style="height: 300px;">
+    <h5 class="card-title">${item.title}</h5>
+    <p>${item.definition}</p>
+    <p>${item.language}</p>
+  <p>${item.time}</p>
+
+    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"> Delete</i>
+    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
+  </div>
+</div>`;
+  }
+  renderToDOM('#store', formCard);
+};
 
 // eslint-disable-next-line import/no-mutable-exports
 let showVocabArr = [];
@@ -51,6 +72,6 @@ const showVocab = (array) => {
   renderToDOM('#store', domString);
 };
 
-export { showVocab, showVocabArr };
+export { showVocab, showVocabArr, searchedVocabOnDom };
 
 // test

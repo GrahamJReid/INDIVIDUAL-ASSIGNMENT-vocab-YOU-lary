@@ -1,5 +1,6 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
+import selectVocabulary from './selectVocab';
 
 const addVocabularyForm = (obj = {}) => {
   console.warn(obj);
@@ -13,6 +14,9 @@ const addVocabularyForm = (obj = {}) => {
       <div class="form-group">
         <label for="description">Description</label>
         <textarea class="form-control" placeholder="Book Description" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
+        </div>
+      <div class="form-group" id="select-author">
+      </div>
       </div>
       <div class="form-group">
       <label for="description">Language</label>
@@ -24,6 +28,7 @@ const addVocabularyForm = (obj = {}) => {
     </form>`;
 
   renderToDOM('#form-container', domString);
+  selectVocabulary(`${obj.uid || ''}`);
 };
 
 export default addVocabularyForm;
