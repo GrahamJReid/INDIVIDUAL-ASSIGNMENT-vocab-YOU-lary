@@ -20,4 +20,3 @@ const startApp = (user) => {
   // ATTACH THE EVENT LISTENERS TO THE NAVBAR
 };
 export default startApp;
-startApp();

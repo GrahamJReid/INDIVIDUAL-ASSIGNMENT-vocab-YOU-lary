@@ -39,12 +39,12 @@ const domEvents = (user) => {
       htmlLanguage(user.uid).then(showVocab);
     }
     if (e.target.id === 'new') {
-      const sortedProjectNames = showVocabArr.sort((a, b) => a.time.localeCompare(b.time));
+      const sortedProjectNames = showVocabArr.sort((a, b) => b.time.localeCompare(a.time));
 
       showVocab(sortedProjectNames);
     }
     if (e.target.id === 'old') {
-      const sortedProjectNames = showVocabArr.sort((a, b) => b.time.localeCompare(a.time));
+      const sortedProjectNames = showVocabArr.sort((a, b) => a.time.localeCompare(b.time));
 
       showVocab(sortedProjectNames);
     }
