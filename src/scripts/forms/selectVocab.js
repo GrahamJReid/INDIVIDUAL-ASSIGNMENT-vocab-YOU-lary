@@ -8,11 +8,11 @@ const selectVocabulary = (uid) => {
     <option value="">Select a Language</option>`;
 
   getVocabulary(uid).then((authorsArray) => {
-    if (authorsArray.indexOf('CSS') === -1) { authorsArray.push('CSS'); }
     authorsArray.forEach((author) => {
       console.warn(author);
       domString += `
-          <option 
+      
+          <option  
             value="${author.firebaseKey}" 
             ${uid === author.firebaseKey ? 'selected' : ''}>
               ${author.language}
