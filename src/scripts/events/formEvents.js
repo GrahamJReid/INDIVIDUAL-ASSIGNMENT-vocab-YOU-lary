@@ -1,5 +1,5 @@
 import { createVocabulary, getVocabulary, updateVocabulary } from '../../api/vocabularyData';
-import showVocab from '../pages/vocabulary';
+import { showVocab } from '../pages/vocabulary';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {

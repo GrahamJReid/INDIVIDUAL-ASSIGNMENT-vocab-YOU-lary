@@ -1,6 +1,6 @@
 import { getVocabulary } from '../../api/vocabularyData';
 import addVocabularyForm from '../forms/addVocabularyForm';
-import showVocab from '../pages/vocabulary';
+import { showVocab } from '../pages/vocabulary';
 
 const navigationEvents = (user) => {
   document.querySelector('#all-Vocabulary').addEventListener('click', () => {
