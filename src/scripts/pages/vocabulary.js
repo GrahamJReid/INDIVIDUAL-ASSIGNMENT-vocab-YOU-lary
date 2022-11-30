@@ -3,11 +3,18 @@ import renderToDOM from '../utils/renderToDOM';
 
 const showVocab = (array) => {
   clearDom();
-  let domString = `<div>
-  <button id="javascript">Javascript</button>
-  <button id="html">HTML</button>
-  <button id="css">CSS</button>
-  </div>`;
+  let domString = `
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Language/Tech
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" id="html">HTML</a>
+    <a class="dropdown-item" id="css">CSS</a>
+    <a class="dropdown-item" id="javascript">JAVASCRIPT</a>
+  </div>
+</div>
+`;
 
   array.forEach((item) => {
     domString += `
