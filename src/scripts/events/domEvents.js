@@ -3,7 +3,7 @@ import {
   deleteVocabulary, getSingleVocabulary, getVocabulary, htmlLanguage, javascriptLanguage
 } from '../../api/vocabularyData';
 import addVocabularyForm from '../forms/addVocabularyForm';
-import showVocab from '../pages/vocabulary';
+import { showVocab, showVocabArr } from '../pages/vocabulary';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -37,6 +37,21 @@ const domEvents = (user) => {
     if (e.target.id.includes('html')) {
       console.warn('this is the javascriptvibe');
       htmlLanguage(user.uid).then(showVocab);
+    }
+    if (e.target.id === 'new') {
+      const sortedProjectNames = showVocabArr.sort((a, b) => a.time.localeCompare(b.time));
+
+      showVocab(sortedProjectNames);
+    }
+    if (e.target.id === 'old') {
+      const sortedProjectNames = showVocabArr.sort((a, b) => b.time.localeCompare(a.time));
+
+      showVocab(sortedProjectNames);
+    }
+    if (e.target.id === 'alpha') {
+      const sortedProjectNames = showVocabArr.sort((a, b) => a.title.localeCompare(b.title));
+
+      showVocab(sortedProjectNames);
     }
   });
 };

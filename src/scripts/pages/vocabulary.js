@@ -1,8 +1,15 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
 
+// eslint-disable-next-line import/no-mutable-exports
+let showVocabArr = [];
+const showBooksClear = () => {
+  showVocabArr = [];
+};
 const showVocab = (array) => {
   clearDom();
+  showBooksClear();
+  array.forEach((item) => showVocabArr.push(item));
   let domString = `
   <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -12,6 +19,16 @@ const showVocab = (array) => {
     <a class="dropdown-item" id="html">HTML</a>
     <a class="dropdown-item" id="css">CSS</a>
     <a class="dropdown-item" id="javascript">JAVASCRIPT</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Sort
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" id="old">Oldest to Newest</a>
+    <a class="dropdown-item" id="new">Newest to Oldest</a>
+    <a class="dropdown-item" id="alpha">Alphabetically</a>
   </div>
 </div>
 `;
@@ -34,6 +51,6 @@ const showVocab = (array) => {
   renderToDOM('#store', domString);
 };
 
-export default showVocab;
+export { showVocab, showVocabArr };
 
 // test
