@@ -2,10 +2,24 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
 
-const searchedVocabOnDom = (arr) => {
+const searchedVocabOnDom = (arr, arr2) => {
   clearDom();
   let formCard = '';
   for (const item of arr) {
+    formCard += `<div class="card">
+  
+  <div class="card-body" style="height: 300px;">
+    <h5 class="card-title">${item.title}</h5>
+    <p>${item.definition}</p>
+    <p>${item.language}</p>
+  <p>${item.time}</p>
+
+    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"> Delete</i>
+    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
+  </div>
+</div>`;
+  }
+  for (const item of arr2) {
     formCard += `<div class="card">
   
   <div class="card-body" style="height: 300px;">

@@ -17,8 +17,10 @@ const navigationEvents = (user) => {
     console.warn(searchValue);
     // eslint-disable-next-line arrow-parens
     const searchResult = showVocabArr.filter(taco => taco.title.toLowerCase().includes(searchValue));
-    console.warn(searchResult);
-    searchedVocabOnDom(searchResult);
+    // eslint-disable-next-line arrow-parens
+    const searchResult2 = showVocabArr.filter(taco => taco.language.toLowerCase().includes(searchValue));
+    console.warn(searchResult, searchResult2);
+    searchedVocabOnDom(searchResult, searchResult2);
   });
 };
 export default navigationEvents;
