@@ -12,7 +12,7 @@ const formEvents = (user) => {
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        language: document.querySelector('#language').value.toUpperCase(),
+        language: document.querySelector('#languageDropDownOutput').value,
         uid: `${user.uid}`,
         time: `${currentdate.getDate()}/${
           currentdate.getMonth() + 1}/${
@@ -36,7 +36,7 @@ const formEvents = (user) => {
       const payload = {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
-        language: document.querySelector('#language').value,
+        language: document.querySelector('#languageDropDownOutput').value,
         uid: `${user.uid}`,
         firebaseKey
       };
