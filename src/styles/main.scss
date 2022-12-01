@@ -35,6 +35,19 @@ color:orange;
 margin:8px;
 text-shadow: 5px 2px  white;
 }
+.logout-btn{
+  background-color:orange;
+  color:purple;
+  border:solid white 1px;
+  margin:25px;
+  
+}
+.logout-btn:hover{
+  background-color:white;
+  color:purple;
+  border:solid orange 1px;
+  margin:25px;
+}
 .title{
  
   color: orange;
