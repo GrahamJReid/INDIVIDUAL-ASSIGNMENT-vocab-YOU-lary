@@ -7,6 +7,8 @@ body {
   color: black;
   text-align: center;
   margin-top: 100px;
+  background-repeat: no-repeat;
+ background-attachment: fixed;
 }
 #store{
   display:flex;
@@ -21,9 +23,16 @@ body {
   margin:25px;
   border: solid orange 2px;
 }
+.card-body{
+  border: solid white 2px;
+  margin:4px;
+  border-radius:25px;
+  box-shadow: black;
+}
 .navbar-logo{
 font-size:50px;
 color:orange;
+margin:8px;
 }
 #navnav{
   background-color:purple;
@@ -32,4 +41,6 @@ color:orange;
 .navbarContent{
   background-color:purple;
   color: orange;
+  font-size: 25px;
+  font-weight: 200;
 }

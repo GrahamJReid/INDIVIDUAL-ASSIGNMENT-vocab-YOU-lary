@@ -74,6 +74,7 @@ const showVocab = (array) => {
   
         <div class="card-body" style="height: 300px;">
           <h5 class="card-title">Term: ${item.title}</h5>
+          <p>____________________________</p>
           <p>Definition: ${item.definition}</p>
           <p>Language: ${item.language}</p>
         <p>${item.time}</p>
