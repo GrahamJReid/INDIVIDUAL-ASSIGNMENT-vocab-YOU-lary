@@ -14,8 +14,8 @@ const startApp = (user) => {
   // BUILD THE DOM
   // ADD THE EVENT LISTENTERS TO THE DOM
   // ADD FORM EVENT LISTENTERS TO THE DOM
-  logoutButton();
   navBar();
+  logoutButton();
   navigationEvents(user);
   // DYNAMICALLY ADD THE NAV
   // ADD THE LOGOUT BUTTON COMPONENT
