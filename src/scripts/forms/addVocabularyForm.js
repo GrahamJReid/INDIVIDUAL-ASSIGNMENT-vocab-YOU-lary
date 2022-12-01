@@ -1,6 +1,6 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
-import selectVocabulary from './selectVocab';
+// import selectVocabulary from './selectVocab';
 
 const addVocabularyForm = (obj = {}) => {
   console.warn(obj);
@@ -15,20 +15,32 @@ const addVocabularyForm = (obj = {}) => {
         <label for="description">Description</label>
         <textarea class="form-control" placeholder="Book Description" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
         </div>
-      <div class="form-group" id="select-author">
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Select Language
+        </button>
+        <div id="languageDropDown"  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id="languageOne">HTML</a>
+          <a class="dropdown-item" id="languageTwo">CSS</a>
+          <a class="dropdown-item" id="languageThree">JAVASCRIPT</a>
+          
+        </div>
       </div>
       </div>
+      </div>
+
       <div class="form-group">
       <label for="description">Language</label>
-      <textarea class="form-control" placeholder="Book Description" id="language" style="height: 100px">${obj.language || ''}</textarea>
+      <textarea class="form-control" placeholder="Book Description" id="languageDropDownOutput" style="height: 100px"></textarea>
     </div>
+
    
       <button type="submit" class="btn btn-primary">Submit Vocabulary
       </button>
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectVocabulary(`${obj.uid || ''}`);
+  // selectVocabulary(`${obj.uid || ''}`);
 };
 
 export default addVocabularyForm;

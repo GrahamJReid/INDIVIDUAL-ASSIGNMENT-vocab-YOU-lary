@@ -4,6 +4,7 @@ import {
 } from '../../api/vocabularyData';
 import addVocabularyForm from '../forms/addVocabularyForm';
 import { showVocab, showVocabArr } from '../pages/vocabulary';
+import renderToDOM from '../utils/renderToDOM';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -52,6 +53,21 @@ const domEvents = (user) => {
       const sortedProjectNames = showVocabArr.sort((a, b) => a.title.localeCompare(b.title));
 
       showVocab(sortedProjectNames);
+    }
+    if (e.target.id.includes('languageOne')) {
+      console.warn('this is the htmlLanguage vibe');
+      const languageString = 'HTML';
+      renderToDOM('#languageDropDownOutput', languageString);
+    }
+    if (e.target.id.includes('languageTwo')) {
+      console.warn('this is the htmlLanguage vibe');
+      const languageString = 'CSS';
+      renderToDOM('#languageDropDownOutput', languageString);
+    }
+    if (e.target.id.includes('languageThree')) {
+      console.warn('this is the htmlLanguage vibe');
+      const languageString = 'JAVASCRIPT';
+      renderToDOM('#languageDropDownOutput', languageString);
     }
   });
 };
