@@ -9,13 +9,13 @@ const searchedVocabOnDom = (arr, arr2) => {
     formCard += `<div class="card">
   
   <div class="card-body" style="height: 300px;">
-    <h5 class="card-title">${item.title}</h5>
-    <p>${item.definition}</p>
-    <p>${item.language}</p>
+    <h5 class="card-title">Term: ${item.title}</h5>
+    <p>Definition: ${item.definition}</p>
+    <p>Language: ${item.language}</p>
   <p>${item.time}</p>
 
-    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"> Delete</i>
-    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
+    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="logout-btn btn btn-danger fas fa-trash-alt"> Delete</i>
+    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="logout-btn fas fa-edit btn btn-info">Edit</i>
   </div>
 </div>`;
   }
@@ -23,13 +23,13 @@ const searchedVocabOnDom = (arr, arr2) => {
     formCard += `<div class="card">
   
   <div class="card-body" style="height: 300px;">
-    <h5 class="card-title">${item.title}</h5>
-    <p>${item.definition}</p>
-    <p>${item.language}</p>
+    <h5 class="card-title">Term: ${item.title}</h5>
+    <p>Definition: ${item.definition}</p>
+    <p>Language: ${item.language}</p>
   <p>${item.time}</p>
 
-    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"> Delete</i>
-    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
+    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class=" logout-btn btn btn-danger fas fa-trash-alt"> Delete</i>
+    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class=" logout-btn fas fa-edit btn btn-info">Edit</i>
   </div>
 </div>`;
   }
@@ -73,13 +73,14 @@ const showVocab = (array) => {
       <div class="card">
   
         <div class="card-body" style="height: 300px;">
-          <h5 class="card-title">${item.title}</h5>
-          <p>${item.definition}</p>
-          <p>${item.language}</p>
+          <h5 class="card-title">Term: ${item.title}</h5>
+          <p>____________________________</p>
+         <div class="definition"> <p>Definition: ${item.definition}</p></div>
+          <p>Language: ${item.language}</p>
         <p>${item.time}</p>
       
-          <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"> Delete</i>
-          <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
+          <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="logout-btn btn btn-danger fas"> Delete</i>
+          <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="logout-btn fas  btn btn-info">Edit</i>
         </div>
       </div>`;
   });
