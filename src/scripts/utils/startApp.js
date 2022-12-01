@@ -1,9 +1,11 @@
+import { getVocabulary } from '../../api/vocabularyData';
 import logoutButton from '../../components/buttons/logoutButton';
 import domBuilder from '../components/shared/domBuilder';
 import navBar from '../components/shared/navBar';
 import domEvents from '../events/domEvents';
 import formEvents from '../events/formEvents';
 import navigationEvents from '../events/navigationEvents';
+import { showVocab } from '../pages/vocabulary';
 
 const startApp = (user) => {
   domBuilder();
@@ -18,5 +20,6 @@ const startApp = (user) => {
   // DYNAMICALLY ADD THE NAV
   // ADD THE LOGOUT BUTTON COMPONENT
   // ATTACH THE EVENT LISTENERS TO THE NAVBAR
+  getVocabulary(user.uid).then((userVocab) => showVocab(userVocab));
 };
 export default startApp;
