@@ -3,7 +3,7 @@
 
 
 body {
-  background-color: grey;
+  background-image: linear-gradient(grey, black);
   color: black;
   text-align: center;
   margin-top: 100px;
@@ -12,13 +12,24 @@ body {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin:10px;
 }
 .card{
   background-color:purple;
-  color:white;
+  color:orange;
   width:25%;
+  margin:25px;
+  border: solid orange 2px;
 }
 .navbar-logo{
 font-size:50px;
 color:orange;
+}
+#navnav{
+  background-color:purple;
+  color: orange;
+}
+.navbarContent{
+  background-color:purple;
+  color: orange;
 }
