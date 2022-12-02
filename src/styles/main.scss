@@ -18,9 +18,16 @@ body {
   margin-top: 100px;
   background-repeat: no-repeat;
  background-attachment: fixed;
+ display:flex;
+  flex-direction:row;
+  justify-content: space-around;
  width: auto;
   height: auto;
  
+}
+.oragami{
+  display:flex;
+  flex-direction:row;
 }
 .page-title{
   border:solid white 2px;
@@ -127,8 +134,8 @@ background-color:orange;
   color: orange;
   border:double white 5px;
   border-radius:5px;
-  width:77%;
-  margin-left:11%;
+  width:79%;
+  margin-left:10%;
   
 }
 .navbarContent{
