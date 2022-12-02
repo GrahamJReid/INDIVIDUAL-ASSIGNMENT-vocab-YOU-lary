@@ -4,7 +4,7 @@ import domBuilder from '../components/shared/domBuilder';
 import navBar from '../components/shared/navBar';
 import domEvents from '../events/domEvents';
 import formEvents from '../events/formEvents';
-import navigationEvents from '../events/navigationEvents';
+import { navigationEvents, filterEvents, sortEvents } from '../events/navigationEvents';
 import { showVocab } from '../pages/vocabulary';
 
 const startApp = (user) => {
@@ -16,6 +16,8 @@ const startApp = (user) => {
   // ADD FORM EVENT LISTENTERS TO THE DOM
   navBar();
   logoutButton();
+  filterEvents(user);
+  sortEvents();
   navigationEvents(user);
   // DYNAMICALLY ADD THE NAV
   // ADD THE LOGOUT BUTTON COMPONENT
