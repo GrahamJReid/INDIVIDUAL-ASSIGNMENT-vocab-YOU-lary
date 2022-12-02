@@ -1,4 +1,6 @@
-import { getVocabulary } from '../../api/vocabularyData';
+import {
+  cssLanguage, getVocabulary, htmlLanguage, javascriptLanguage
+} from '../../api/vocabularyData';
 import addVocabularyForm from '../forms/addVocabularyForm';
 import { searchedVocabOnDom, showVocab, showVocabArr } from '../pages/vocabulary';
 
@@ -23,4 +25,39 @@ const navigationEvents = (user) => {
     searchedVocabOnDom(searchResult, searchResult2);
   });
 };
-export default navigationEvents;
+const filterEvents = (user) => {
+  document.querySelector('#targetFilters').addEventListener('click', (e) => {
+    if (e.target.id.includes('javascript')) {
+      console.warn('this is the javascriptvibe');
+      javascriptLanguage(user.uid).then(showVocab);
+    }
+    if (e.target.id.includes('css')) {
+      console.warn('this is the javascriptvibe');
+      cssLanguage(user.uid).then(showVocab);
+    }
+    if (e.target.id.includes('html')) {
+      console.warn('this is the javascriptvibe');
+      htmlLanguage(user.uid).then(showVocab);
+    }
+  });
+};
+const sortEvents = () => {
+  document.querySelector('#targetSort').addEventListener('click', (e) => {
+    if (e.target.id === 'new') {
+      const sortedProjectNames = showVocabArr.sort((a, b) => b.time.localeCompare(a.time));
+
+      showVocab(sortedProjectNames);
+    }
+    if (e.target.id === 'old') {
+      const sortedProjectNames = showVocabArr.sort((a, b) => a.time.localeCompare(b.time));
+
+      showVocab(sortedProjectNames);
+    }
+    if (e.target.id === 'alpha') {
+      const sortedProjectNames = showVocabArr.sort((a, b) => a.title.localeCompare(b.title));
+
+      showVocab(sortedProjectNames);
+    }
+  });
+};
+export { navigationEvents, filterEvents, sortEvents };

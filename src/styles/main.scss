@@ -1,6 +1,15 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
 
+.WebContainer{
+  width: 100%;
+  height: auto;
+}
+.articles{
+  width:90%; /*Takes 90% width from WebContainer*/
+  height: auto;
+  margin: auto;
+} 
 
 body {
   background-image: linear-gradient(grey, black);
@@ -9,36 +18,70 @@ body {
   margin-top: 100px;
   background-repeat: no-repeat;
  background-attachment: fixed;
+ width: auto;
+  height: auto;
+ 
 }
 .page-title{
+  border:solid white 2px;
   
+  width:400px;
   font-size:150px;
-  height:300px;
+  height:270px;
   color:orange;
-  text-shadow: 2px 2px purple;
+ 
+  text-shadow: 5px 5px purple;
+  
+}
+.title-line{
+  font-size:40px;
+ color:white; 
+ padding-top:15px;
+ padding-bottom:100px;
+ margin-left:50px;
+text-shadow:20px 20px orange;
+}
+.title-line2{
+  font-size:35px;
+  color:white; 
+  margin-left:125px;
+  margin-top:15px;
+  padding-top:15px;
+ text-shadow:20px 20px orange; 
+}
+.title-package{
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  margin-left:50px;
+  width:500px;
 }
 #store{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content:center;
   margin:10px;
+  width:98%;
 }
 .card{
   background-color:purple;
   color:orange;
   width:25%;
   margin:25px;
-  border: double orange 6px;
+  border: solid orange 6px;
 }
 .card-body{
-  border: solid white 1.5px;
+  border: solid white 3px;
   margin:2px;
   border-radius:2.5px;
   box-shadow: black;
+  overflow:scroll;
+  font-size:20px;
 }
 
 .navbar-logo{
-font-size:75px;
+font-size:125px;
 color:orange;
 margin:8px;
 text-shadow: 5px 2px  white;
@@ -48,6 +91,7 @@ text-shadow: 5px 2px  white;
   color:purple;
   border:solid white 1px;
   margin:25px;
+  font-size:25px;
   
 }
 .logout-btn:hover{
@@ -57,11 +101,12 @@ text-shadow: 5px 2px  white;
   margin:25px;
 }
 .logout-btn-space{
-margin-left:500px;
-margin-right:25px;
+
+margin-right:100px;
 background-color:orange;
   color:purple;
   border:solid white 1px;
+  font-size: 25px; 
 }
 .logout-btn-space:hover{
   background-color:white;
@@ -80,6 +125,10 @@ background-color:orange;
 #navnav{
   background-color:purple;
   color: orange;
+  border:double white 5px;
+  border-radius:5px;
+  width:77%;
+  margin-left:11%;
   
 }
 .navbarContent{
@@ -89,4 +138,13 @@ background-color:orange;
   font-weight: 300;
   margin-right:25px;
   
+}
+.form-width{
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  
+}
+.add-width{
+  width: 1200px;
 }

@@ -5,15 +5,14 @@ import renderToDOM from '../utils/renderToDOM';
 const addVocabularyForm = (obj = {}) => {
   console.warn(obj);
   clearDom();
-  const domString = `
-    <form id="${obj.firebaseKey ? `update-Vocabulary--${obj.firebaseKey}` : 'submit-Vocabulary'}" class="mb-4">
+  const domString = `<div class="form-width"><form id="${obj.firebaseKey ? `update-Vocabulary--${obj.firebaseKey}` : 'submit-Vocabulary'}" class="mb-4">
       <div class="form-group">
         <label for="title"></label>
-        <input type="text" class="form-control" id="title" aria-describedby="bookTitle" placeholder="Enter Term Here" value="${obj.title || ''}" required>
+        <input type="text" class="form-control add-width" id="title" aria-describedby="bookTitle" placeholder="Enter Term Here" value="${obj.title || ''}" required>
       </div>
       <div class="form-group">
         <label for="description"></label>
-        <textarea class="form-control" placeholder="Enter Definition Here" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
+        <textarea class="form-control add-width" placeholder="Enter Definition Here" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
         </div>
         <div class="dropdown">
         <button class=" logout-btn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,18 +25,19 @@ const addVocabularyForm = (obj = {}) => {
           
         </div>
       </div>
-      </div>
-      </div>
 
       <div class="form-group">
       <label for="description"></label>
-      <textarea class="form-control" placeholder="Add Language" id="languageDropDownOutput" style="height: 100px"></textarea>
+      <textarea class="form-control add-width" placeholder="Add Language" id="languageDropDownOutput"></textarea>
     </div>
 
    
       <button type="submit" class=" logout-btn btn btn-primary">Submit Vocabulary
       </button>
-    </form>`;
+</form></div>
+
+     
+    `;
 
   renderToDOM('#form-container', domString);
   // selectVocabulary(`${obj.uid || ''}`);
