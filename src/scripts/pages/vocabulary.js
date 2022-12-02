@@ -2,7 +2,7 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
 
-const searchedVocabOnDom = (arr, arr2) => {
+const searchedVocabOnDom = (arr) => {
   clearDom();
   let formCard = '';
   for (const item of arr) {
@@ -10,26 +10,13 @@ const searchedVocabOnDom = (arr, arr2) => {
   
   <div class="card-body" style="height: 300px;">
     <h5 class="card-title">Term: ${item.title}</h5>
+    <p>____________________________</p>
     <p>Definition: ${item.definition}</p>
     <p>Language: ${item.language}</p>
   <p>${item.time}</p>
 
     <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="logout-btn btn btn-danger fas"> Delete</i>
     <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="logout-btn fas btn btn-info">Edit</i>
-  </div>
-</div>`;
-  }
-  for (const item of arr2) {
-    formCard += `<div class="card">
-  
-  <div class="card-body" style="height: 300px;">
-    <h5 class="card-title">Term: ${item.title}</h5>
-    <p>Definition: ${item.definition}</p>
-    <p>Language: ${item.language}</p>
-  <p>${item.time}</p>
-
-    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class=" logout-btn btn btn-danger fas"> Delete</i>
-    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class=" logout-btn fas btn-info">Edit</i>
   </div>
 </div>`;
   }

@@ -1,6 +1,15 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
 
+.WebContainer{
+  width: 100%;
+  height: auto;
+}
+.articles{
+  width:90%; /*Takes 90% width from WebContainer*/
+  height: auto;
+  margin: auto;
+} 
 
 body {
   background-image: linear-gradient(grey, black);
@@ -9,13 +18,33 @@ body {
   margin-top: 100px;
   background-repeat: no-repeat;
  background-attachment: fixed;
+ display:flex;
+ justify-content:center;
+ width: auto;
+  height: auto;
+ 
 }
 .page-title{
-  
+  padding-top:50px;
   font-size:150px;
   height:300px;
   color:orange;
   text-shadow: 5px 5px purple;
+}
+.title-line{
+  font-size:25px;
+ color:white; 
+ padding-bottom:100px;
+ margin-left:50px;
+text-shadow:20px 20px orange;
+}
+.title-package{
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  margin-bottom:150px;
+  margin-left:50px;
+  width:500px;
 }
 #store{
   display:flex;
@@ -23,6 +52,7 @@ body {
   flex-wrap: wrap;
   justify-content:center;
   margin:10px;
+  width:98%;
 }
 .card{
   background-color:purple;
@@ -36,6 +66,7 @@ body {
   margin:2px;
   border-radius:2.5px;
   box-shadow: black;
+  overflow:scroll;
 }
 
 .navbar-logo{
@@ -49,6 +80,7 @@ text-shadow: 5px 2px  white;
   color:purple;
   border:solid white 1px;
   margin:25px;
+  font-size:25px;
   
 }
 .logout-btn:hover{
@@ -58,11 +90,12 @@ text-shadow: 5px 2px  white;
   margin:25px;
 }
 .logout-btn-space{
-margin-left:500px;
-margin-right:25px;
+
+margin-right:100px;
 background-color:orange;
   color:purple;
   border:solid white 1px;
+  font-size: 25px; 
 }
 .logout-btn-space:hover{
   background-color:white;
@@ -81,6 +114,10 @@ background-color:orange;
 #navnav{
   background-color:purple;
   color: orange;
+  border:double white 2px;
+  border-radius:5px;
+  width:77%;
+  margin-left:11%;
   
 }
 .navbarContent{
