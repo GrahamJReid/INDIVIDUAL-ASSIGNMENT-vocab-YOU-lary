@@ -14,8 +14,8 @@ const searchedVocabOnDom = (arr, arr2) => {
     <p>Language: ${item.language}</p>
   <p>${item.time}</p>
 
-    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="logout-btn btn btn-danger fas fa-trash-alt"> Delete</i>
-    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="logout-btn fas fa-edit btn btn-info">Edit</i>
+    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class="logout-btn btn btn-danger fas"> Delete</i>
+    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class="logout-btn fas btn btn-info">Edit</i>
   </div>
 </div>`;
   }
@@ -28,8 +28,8 @@ const searchedVocabOnDom = (arr, arr2) => {
     <p>Language: ${item.language}</p>
   <p>${item.time}</p>
 
-    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class=" logout-btn btn btn-danger fas fa-trash-alt"> Delete</i>
-    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class=" logout-btn fas fa-edit btn btn-info">Edit</i>
+    <i id="delete-Vocabulary-btn--${item.firebaseKey}" class=" logout-btn btn btn-danger fas"> Delete</i>
+    <i id="edit-Vocabulary-btn--${item.firebaseKey}" class=" logout-btn fas btn-info">Edit</i>
   </div>
 </div>`;
   }

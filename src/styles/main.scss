@@ -15,12 +15,13 @@ body {
   font-size:150px;
   height:300px;
   color:orange;
-  text-shadow: 2px 2px purple;
+  text-shadow: 5px 5px purple;
 }
 #store{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content:center;
   margin:10px;
 }
 .card{
@@ -89,4 +90,13 @@ background-color:orange;
   font-weight: 300;
   margin-right:25px;
   
+}
+.form-width{
+  display:flex;
+  justify-content: center;
+  width: 100%;
+  
+}
+.add-width{
+  width: 1200px;
 }
