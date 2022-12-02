@@ -11,10 +11,10 @@ const navBar = () => {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a id="all-Vocabulary"class="nav-link navbarContent" href="#">All Vocabulary <span class="sr-only">(current)</span></a>
+          <a id="all-Vocabulary"class="logout-btn nav-link navbarContent" href="#">All Vocabulary <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbarContent" id="create-Vocabulary" href="#">Create Vocabulary</a>
+          <a class="logout-btn nav-link navbarContent" id="create-Vocabulary" href="#">Create Vocabulary</a>
         </li>
         <li><div id="targetFilters"><div class="dropdown">
         <button class=" logout-btn btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
