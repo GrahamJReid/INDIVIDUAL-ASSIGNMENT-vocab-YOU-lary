@@ -1,29 +1,22 @@
-// import { getVocabulary } from '../../api/vocabularyData';
-// import renderToDOM from '../utils/renderToDOM';
+import { getVocabulary } from '../../api/vocabularyData';
+import renderToDOM from '../utils/renderToDOM';
 
-// const selectVocabulary = (uid) => {
-//   console.warn(uid);
-//   let domString = `<label for="author">Select a language</label>
-//     <select class="form-control" id="author_id" >
-//     <option value="">Select a Language</option>`;
+const selectVocabulary = (uid) => {
+  let domString = '';
+  getVocabulary(uid).then((authorsArray) => {
+    authorsArray.forEach((author) => {
+      console.warn(author);
+      domString += `
+          
+      <a class="dropdown-item" id="newLanguage">${author.language}</a>
+              
+          `;
+    });
 
-//   getVocabulary(uid).then((authorsArray) => {
-//     authorsArray.forEach((author) => {
-//       console.warn(author);
-//       domString += `
+    domString += '</select>';
 
-//           <option
-//             value="${author.firebaseKey}"
-//             ${uid === author.firebaseKey ? 'selected' : ''}>
-//               ${author.language}
-//           </option>`;
-//     });
+    renderToDOM('#newLanguage', domString);
+  });
+};
 
-//     domString += '</select>';
-
-//     renderToDOM('#newLanguage', domString);
-//   });
-// };
-
-// export default selectVocabulary;
-// tes
+export default selectVocabulary;

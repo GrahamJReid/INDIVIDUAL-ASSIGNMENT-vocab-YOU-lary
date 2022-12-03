@@ -69,6 +69,11 @@ const domEvents = (user) => {
       const languageString = 'JAVASCRIPT';
       renderToDOM('#languageDropDownOutput', languageString);
     }
+    if (e.target.id.includes('newLanguage')) {
+      console.warn('this is the newLanguage');
+      const languageString = 'HIPPO';
+      renderToDOM('#languageDropDownOutput', languageString);
+    }
   });
 };
 export default domEvents;
