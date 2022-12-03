@@ -1,6 +1,9 @@
 import { createVocabulary, getVocabulary, updateVocabulary } from '../../api/vocabularyData';
+import selectVocabz from '../forms/selectVocab';
 import { showVocab } from '../pages/vocabulary';
 
+// eslint-disable-next-line import/no-mutable-exports
+let vocabPay = '';
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -15,6 +18,8 @@ const formEvents = (user) => {
         uid: `${user.uid}`,
         time: new Date().toLocaleString()
       };
+      vocabPay += payload.language;
+      selectVocabz(payload.language);
       createVocabulary(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
@@ -41,4 +46,4 @@ const formEvents = (user) => {
   });
 };
 
-export default formEvents;
+export { formEvents, vocabPay };

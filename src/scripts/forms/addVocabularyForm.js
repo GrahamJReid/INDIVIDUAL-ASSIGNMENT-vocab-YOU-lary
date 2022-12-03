@@ -40,7 +40,7 @@ const addVocabularyForm = (obj = {}) => {
     `;
 
   renderToDOM('#form-container', domString);
-  selectVocabulary(`${obj.uid || ''}`);
+  selectVocabulary(`${''}`);
 };
 
 export default addVocabularyForm;
