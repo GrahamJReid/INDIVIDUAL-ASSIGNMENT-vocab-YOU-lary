@@ -1,5 +1,5 @@
 import { createVocabulary, getVocabulary, updateVocabulary } from '../../api/vocabularyData';
-import selectVocabz from '../forms/selectVocab';
+// import selectVocabz from '../forms/selectVocab';
 import { showVocab } from '../pages/vocabulary';
 
 // eslint-disable-next-line import/no-mutable-exports
@@ -15,11 +15,11 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         language: document.querySelector('#languageDropDownOutput').value,
-        uid: `${user.uid}`,
+        uid: user.uid,
         time: new Date().toLocaleString()
       };
       vocabPay += payload.language;
-      selectVocabz(payload.language);
+      // selectVocabz(payload.language);
       createVocabulary(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 

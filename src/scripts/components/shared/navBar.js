@@ -31,8 +31,8 @@ const navBar = () => {
        Sort
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" id="old">Oldest to Newest</a>
         <a class="dropdown-item" id="new">Newest to Oldest</a>
+        <a class="dropdown-item" id="old">Oldest to Newest</a>
         <a class="dropdown-item" id="alpha">Alphabetically</a>
       </div>
     </div></div></li>
