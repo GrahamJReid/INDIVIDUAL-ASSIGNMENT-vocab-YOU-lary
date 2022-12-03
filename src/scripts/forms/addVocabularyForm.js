@@ -28,7 +28,7 @@ const addVocabularyForm = (obj = {}) => {
 
       <div class="form-group">
       <label for="description"></label>
-      <textarea class="form-control add-width" placeholder="Add Language" id="languageDropDownOutput"></textarea>
+      <textarea class="form-control add-width" placeholder="Add Language" id="languageDropDownOutput">${obj.language === 'HTML' ? 'HTML' : ''}${obj.language === 'CSS' ? 'CSS' : ''}${obj.language === 'JAVASCRIPT' ? 'JAVASCRIPT' : ''}</textarea>
     </div>
 
    
