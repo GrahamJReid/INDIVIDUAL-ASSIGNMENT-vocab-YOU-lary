@@ -18,9 +18,6 @@ body {
   margin-top: 100px;
   background-repeat: no-repeat;
  background-attachment: fixed;
- display:flex;
-  flex-direction:row;
-  justify-content: space-around;
  width: auto;
   height: auto;
  
@@ -30,7 +27,7 @@ body {
   flex-direction:row;
 }
 .page-title{
-  border:solid white 2px;
+  
   
   width:400px;
   font-size:150px;

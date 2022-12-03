@@ -1,6 +1,6 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
-// import selectVocabulary from './selectVocab';
+import selectVocabulary from './selectVocab';
 
 const addVocabularyForm = (obj = {}) => {
   console.warn(obj);
@@ -22,7 +22,7 @@ const addVocabularyForm = (obj = {}) => {
           <a class="dropdown-item" id="languageOne">HTML</a>
           <a class="dropdown-item" id="languageTwo">CSS</a>
           <a class="dropdown-item" id="languageThree">JAVASCRIPT</a>
-          
+         <p id="newLanguage"></p>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ const addVocabularyForm = (obj = {}) => {
     `;
 
   renderToDOM('#form-container', domString);
-  // selectVocabulary(`${obj.uid || ''}`);
+  selectVocabulary(`${obj.uid || ''}`);
 };
 
 export default addVocabularyForm;
