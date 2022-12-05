@@ -1,6 +1,6 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
-import selectVocabulary from './selectVocab';
+import { selectVocabulary } from './selectVocab';
 
 const addVocabularyForm = (obj = {}) => {
   console.warn(obj);

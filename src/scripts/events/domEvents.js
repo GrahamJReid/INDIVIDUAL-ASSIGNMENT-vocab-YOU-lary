@@ -5,6 +5,7 @@ import {
 import addVocabularyForm from '../forms/addVocabularyForm';
 import { showVocab, showVocabArr } from '../pages/vocabulary';
 import renderToDOM from '../utils/renderToDOM';
+import { vocabPay } from './formEvents';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -69,9 +70,9 @@ const domEvents = (user) => {
       const languageString = 'JAVASCRIPT';
       renderToDOM('#languageDropDownOutput', languageString);
     }
-    if (e.target.id.includes('newLanguage')) {
+    if (e.target.id.includes(`newLanguage--${vocabPay}`)) {
       console.warn('this is the newLanguage');
-      const languageString = 'HIPPO';
+      const languageString = `${vocabPay}`;
       renderToDOM('#languageDropDownOutput', languageString);
     }
   });
