@@ -1,3 +1,14 @@
+
+// import renderToDOM from '../utils/renderToDOM';
+
+// let vocString = '';
+// const selectVocabz = (vocabExtract) => {
+//   vocString += `<a class="dropdown-item" id="newLanguage">${vocabExtract}</a>`;
+//   renderToDOM('#newLanguage', vocString);
+// };
+
+// export default selectVocabz;
+
 // import { getVocabulary } from '../../api/vocabularyData';
 // import { vocabPay } from '../events/formEvents';
 // import renderToDOM from '../utils/renderToDOM';
@@ -29,3 +40,4 @@
 // };
 
 // export { selectVocabulary, langlang };
+

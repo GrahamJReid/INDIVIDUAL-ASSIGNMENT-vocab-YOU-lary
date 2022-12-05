@@ -31,8 +31,8 @@ const navBar = () => {
        Sort
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" id="old">Oldest to Newest</a>
         <a class="dropdown-item" id="new">Newest to Oldest</a>
+        <a class="dropdown-item" id="old">Oldest to Newest</a>
         <a class="dropdown-item" id="alpha">Alphabetically</a>
       </div>
     </div></div></li>
@@ -40,8 +40,8 @@ const navBar = () => {
       <form class="form-inline my-2 my-lg-0">
         <input id="search" class=" logout-btn form-control mr-sm-2 navbarContent" type="search" placeholder="Search" aria-label="Search">
       </form>
+      <div id="login-form-container"></div>
     </div>
-    <div id="login-form-container"></div>
   </nav></div>`;
   renderToDOM('#navigation', domString);
 };

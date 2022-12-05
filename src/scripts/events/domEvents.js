@@ -5,7 +5,9 @@ import {
 import addVocabularyForm from '../forms/addVocabularyForm';
 import { showVocab, showVocabArr } from '../pages/vocabulary';
 import renderToDOM from '../utils/renderToDOM';
-import { vocabPay } from './formEvents';
+
+// import { vocabPay } from './formEvents';
+
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -40,13 +42,13 @@ const domEvents = (user) => {
       console.warn('this is the javascriptvibe');
       htmlLanguage(user.uid).then(showVocab);
     }
-    if (e.target.id === 'new') {
-      const sortedProjectNames = showVocabArr.sort((a, b) => b.time.localeCompare(a.time));
+    if (e.target.id === 'old') {
+      const sortedProjectNames = showVocabArr.sort((a, b) => a.time.localeCompare(b.time));
 
       showVocab(sortedProjectNames);
     }
-    if (e.target.id === 'old') {
-      const sortedProjectNames = showVocabArr.sort((a, b) => a.time.localeCompare(b.time));
+    if (e.target.id === 'new') {
+      const sortedProjectNames = showVocabArr.sort((b, a) => a.time.localeCompare(b.time));
 
       showVocab(sortedProjectNames);
     }
@@ -70,11 +72,14 @@ const domEvents = (user) => {
       const languageString = 'JAVASCRIPT';
       renderToDOM('#languageDropDownOutput', languageString);
     }
-    if (e.target.id.includes(`newLanguage--${vocabPay}`)) {
-      console.warn('this is the newLanguage');
-      const languageString = `${vocabPay}`;
-      renderToDOM('#languageDropDownOutput', languageString);
-    }
+
+    // if (e.target.id.includes('newLanguage')) {
+    //   console.warn('this is the newLanguage');
+    //   const languageString = vocabPay;
+    //   renderToDOM('#languageDropDownOutput', languageString);
+    // }
+   
+
   });
 };
 export default domEvents;
