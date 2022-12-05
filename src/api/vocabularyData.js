@@ -111,6 +111,20 @@ const htmlLanguage = (uid) => new Promise((resolve, reject) => {
     })
     .catch(reject);
 });
+const getLanguage = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabulary.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const onSale = Object.values(data).filter((item) => item.language);
+      resolve(onSale);
+    })
+    .catch(reject);
+});
 export {
   createVocabulary,
   updateVocabulary,
@@ -119,5 +133,6 @@ export {
   getSingleVocabulary,
   javascriptLanguage,
   cssLanguage,
-  htmlLanguage
+  htmlLanguage,
+  getLanguage
 };
