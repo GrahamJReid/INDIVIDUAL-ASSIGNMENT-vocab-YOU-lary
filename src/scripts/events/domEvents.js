@@ -8,7 +8,6 @@ import renderToDOM from '../utils/renderToDOM';
 
 // import { vocabPay } from './formEvents';
 
-
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('create-Vocabulary')) {
@@ -78,8 +77,6 @@ const domEvents = (user) => {
     //   const languageString = vocabPay;
     //   renderToDOM('#languageDropDownOutput', languageString);
     // }
-   
-
   });
 };
 export default domEvents;

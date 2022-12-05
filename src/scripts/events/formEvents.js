@@ -2,10 +2,11 @@ import { createVocabulary, getVocabulary, updateVocabulary } from '../../api/voc
 // import selectVocabz from '../forms/selectVocab';
 import { showVocab } from '../pages/vocabulary';
 
-
 // eslint-disable-next-line import/no-mutable-exports
 
+// eslint-disable-next-line no-multiple-empty-lines
 
+// eslint-disable-next-line import/no-mutable-exports
 let vocabPay = '';
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {

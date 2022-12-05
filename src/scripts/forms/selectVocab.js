@@ -1,4 +1,3 @@
-
 // import renderToDOM from '../utils/renderToDOM';
 
 // let vocString = '';
@@ -40,4 +39,3 @@
 // };
 
 // export { selectVocabulary, langlang };
-
