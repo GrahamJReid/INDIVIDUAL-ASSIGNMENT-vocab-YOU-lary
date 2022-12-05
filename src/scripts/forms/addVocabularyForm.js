@@ -1,6 +1,8 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDOM';
+
 // import selectVocabulary from './selectVocab';
+
 
 const addVocabularyForm = (obj = {}) => {
   console.warn(obj);
@@ -40,7 +42,10 @@ const addVocabularyForm = (obj = {}) => {
     `;
 
   renderToDOM('#form-container', domString);
+
   // selectVocabulary(`${''}`);
+
+
 };
 
 export default addVocabularyForm;
